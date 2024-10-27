@@ -34,12 +34,6 @@ Route::middleware(['custom_auth:web'])->group( function(){
     Route::get('logout',[CmsUserController::class,'logout'])->name('admin.logout');
 
     Route::get('dashboard',[DashboardController::class,'index'])->name('admin.dashboard');
-    Route::get('dashboard/small-widget',[DashboardController::class,'getSmallWidget'])->name('admin.dashboard.small-widget');
-    Route::get('dashboard/line-chart',[DashboardController::class,'getLineChart'])->name('admin.dashboard.line-chart');
-
-    Route::get('cms-roles-management/ajax-listing',[CmsRoleController::class,'ajaxListing'])->name('cms-roles-management.ajax-listing');
-    Route::resource('cms-roles-management',CmsRoleController::class);
-
     Route::get('cms-users-management/ajax-listing',[CmsUserController::class,'ajaxListing'])->name('cms-users-management.ajax-listing');
     Route::resource('cms-users-management',CmsUserController::class);
 
@@ -48,9 +42,5 @@ Route::middleware(['custom_auth:web'])->group( function(){
     Route::get('app-users/ajax-listing',[UserController::class,'ajaxListing'])->name('app-users.ajax-listing');
     Route::resource('app-users',UserController::class);
 
-    Route::get('content-management/ajax-listing',[ContentManagementController::class,'ajaxListing'])->name('content-management.ajax-listing');
-    Route::resource('content-management',ContentManagementController::class);
-
-    Route::get('faq/ajax-listing',[FaqController::class,'ajaxListing'])->name('faq.ajax-listing');
-    Route::resource('faq',FaqController::class);
+ 
 });
