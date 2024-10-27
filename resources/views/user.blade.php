@@ -14,15 +14,15 @@
 <div class="form-gap"></div>
 <div class="container">
     <div class="row">
+    <h1 class="text-center">User Management System</h1>
         <div class="col-md-4 col-md-offset-4">
              <div class="panel-body">
                 <div class="text-center">
-                    <h2 class="text-center">User Management System</h2>
                     @php
                         $loginurl = route('admin.login') . '?auth_token=zekkmdvhkm';
                         $signupurl = route('admin.signup') . '?auth_token=zekkmdvhkm';
                     @endphp
-                    <p><a href="{{$loginurl}}">Login</a> | <a href="{{$signupurl}}">SignUp</a></p>
+                    <p><a class="btn btn-lg btn-primary btn-block" href="{{$loginurl}}">Login</a>  <a class="btn btn-lg btn-primary btn-block" href="{{$signupurl}}">SignUp</a></p>
                 </div>
             </div>
         </div>
